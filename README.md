@@ -1,73 +1,455 @@
-# AI-Based Traffic & Mobility Forecasting System
+# 🚦 AI-Based Traffic & Mobility Forecasting System
 
-A full-stack platform for traffic volume forecasting, congestion/risk alerts,
-anomaly detection, mobility optimization, and scenario simulation.
+An AI-powered full-stack platform that forecasts traffic conditions, predicts congestion, detects anomalies, and provides intelligent mobility recommendations using historical traffic data and machine learning.
+
+---
+
+# 📌 Project Overview
+
+The **AI-Based Traffic & Mobility Forecasting System** is designed to help transportation authorities, smart city administrators, and mobility service providers make data-driven decisions through predictive analytics.
+
+The platform combines **time-series forecasting**, **anomaly detection**, **geospatial analytics**, and **AI-powered recommendation engines** to predict future traffic patterns, identify congestion risks, and optimize travel routes.
+
+The system provides interactive dashboards, forecasting APIs, scenario simulations, and actionable insights to improve traffic management and reduce travel delays.
+
+---
+
+# 🎯 Objectives
+
+- Forecast future traffic volume
+- Predict congestion levels
+- Detect unusual traffic behavior
+- Recommend optimized travel routes
+- Simulate real-world traffic scenarios
+- Visualize traffic analytics through interactive dashboards
+
+---
+
+# ✨ Features
+
+## 1. Traffic Volume Forecasting
+
+Predict future traffic conditions using historical traffic data.
+
+Supports:
+
+- Hourly Traffic Forecast
+- Daily Traffic Forecast
+- Route-wise Forecast
+- Next 24 Hours Prediction
+- Next 7 Days Prediction
+- Peak Hour Prediction
+
+Supported Forecasting Models:
+
+- Prophet
+- ARIMA
+- LSTM
+- Linear Regression
+- Random Forest Regressor
+- XGBoost (Optional)
+
+---
+
+## 2. Congestion Prediction
+
+Predict future congestion based on:
+
+- Vehicle Count
+- Traffic Speed
+- Historical Congestion
+- Time of Day
+- Day of Week
+- Weather Conditions (Optional)
+
+Generates alerts such as:
+
+- High congestion expected
+- Heavy traffic during peak hours
+- Sudden traffic increase prediction
+- Route congestion warning
+
+Example:
+
+> High congestion expected on Route A between 8:00 AM and 10:00 AM.
+
+---
+
+## 3. Mobility Optimization Engine
+
+Provides AI-generated travel recommendations.
+
+Examples:
+
+- Suggested alternative routes
+- Best travel time
+- Route balancing
+- Congestion reduction recommendations
+- Estimated travel time savings
+
+Example:
+
+> Travel after 10 PM to reduce travel time by approximately 25%.
+
+---
+
+## 4. Traffic Anomaly Detection
+
+Automatically detects abnormal traffic patterns.
+
+Supported methods:
+
+- Isolation Forest
+- Z-Score Detection
+- Statistical Thresholding
+
+Detects:
+
+- Sudden traffic spikes
+- Unexpected traffic drops
+- Sensor anomalies
+- Event-related traffic surges
+
+---
+
+## 5. Scenario Simulation
+
+Simulate real-world events and estimate their traffic impact.
+
+Supported scenarios:
+
+- Road Closure
+- Heavy Rain
+- Festival Traffic
+- Sporting Events
+- Increased Vehicle Load
+- Construction Zones
+
+Simulation Output:
+
+- Delay Prediction
+- Congestion Increase
+- Route Impact
+- Estimated Travel Time
+- Suggested Alternatives
+
+---
+
+## 6. Machine Learning Backend
+
+The backend exposes REST APIs for:
+
+- Dataset Upload
+- Data Processing
+- Feature Engineering
+- Model Training
+- Forecast Generation
+- Congestion Prediction
+- Mobility Recommendation
+- Scenario Simulation
+- Anomaly Detection
+
+Designed with:
+
+- Modular architecture
+- Background model execution
+- Scalable ML services
+- API-first design
+
+---
+
+## 7. Interactive Analytics Dashboard
+
+Visualizes traffic insights through interactive dashboards.
+
+Dashboard includes:
+
+- Historical Traffic Trends
+- Forecast Charts
+- Route Comparison
+- Congestion Heatmaps
+- Peak Hour Analytics
+- Forecast Accuracy
+- Anomaly Highlights
+- Simulation Results
+
+---
+
+# 🧠 Machine Learning Techniques
+
+## Forecasting
+
+- Prophet
+- ARIMA
+- LSTM
+- Random Forest
+- Linear Regression
+
+## Anomaly Detection
+
+- Isolation Forest
+- Z-Score
+- Statistical Threshold
+
+## Feature Engineering
+
+- Time-based Features
+- Lag Features
+- Rolling Averages
+- Seasonal Features
+- Weather Features (Optional)
+
+---
+
+# 📊 Dataset Structure
+
+Example dataset:
+
+| Column | Description |
+|---------|-------------|
+| Timestamp | Date and Time |
+| Route_ID | Route Identifier |
+| Vehicle_Count | Number of Vehicles |
+| Average_Speed | Average Vehicle Speed |
+| Congestion_Level | Congestion Percentage |
+| Weather | Weather Condition |
+| Temperature | Optional |
+| Rainfall | Optional |
+
+---
+
+# 🏗 Project Structure
 
 ```
-traffic-forecast/
-  backend/     FastAPI + SQLAlchemy + scikit-learn ML services
-  frontend/    React (Vite) dashboard with interactive charts
-  docker-compose.yml
+AI_Traffic_Forecasting/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── ml/
+│   │   ├── database/
+│   │   ├── utils/
+│   │   └── main.py
+│   │
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── charts/
+│   └── services/
+│
+├── datasets/
+│
+├── trained_models/
+│
+├── notebooks/
+│
+├── uploads/
+│
+└── README.md
 ```
 
-## Fastest way to try it (local, no Docker)
+---
 
-**1. Backend**
+# ⚙ Technology Stack
+
+## Frontend
+
+- React.js
+- TypeScript
+- Tailwind CSS
+- React Router
+- Axios
+- Recharts / Chart.js
+- Leaflet / Mapbox (Optional)
+
+---
+
+## Backend
+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- Uvicorn
+
+---
+
+## Database
+
+- PostgreSQL
+- SQLite (Development)
+
+---
+
+## Machine Learning
+
+- Scikit-learn
+- Prophet
+- Statsmodels
+- TensorFlow / Keras (LSTM)
+- Pandas
+- NumPy
+
+---
+
+## Visualization
+
+- Plotly
+- Recharts
+- Chart.js
+- Leaflet Maps
+
+---
+
+# 🔌 REST API Overview
+
+## Authentication
+
+- Login
+- Register
+- JWT Authentication
+
+## Dataset
+
+- Upload Dataset
+- View Uploaded Data
+- Delete Dataset
+
+## Forecast
+
+- Train Model
+- Generate Forecast
+- Forecast Accuracy
+
+## Congestion
+
+- Predict Congestion
+- Peak Hour Detection
+
+## Mobility
+
+- Route Recommendation
+- Travel Time Recommendation
+
+## Simulation
+
+- Create Simulation
+- View Simulation Result
+
+## Anomaly Detection
+
+- Detect Anomalies
+- View Anomaly Report
+
+---
+
+# 📈 Dashboard Modules
+
+- Executive Overview
+- Traffic Forecast
+- Congestion Monitoring
+- Peak Hour Analytics
+- Route Comparison
+- Traffic Heatmap
+- Mobility Insights
+- Scenario Simulation
+- Anomaly Dashboard
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/AI_Traffic_Forecasting.git
+
+cd AI_Traffic_Forecasting
+```
+
+## Backend
+
 ```bash
 cd backend
-python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env
-python -m app.utils.seed_data      # optional: generates 30 days of demo data for 4 routes
-uvicorn app.main:app --reload --port 8000
-```
-API docs: http://localhost:8000/docs
-Default admin (auto-created on first run): username `admin`, password `Admin@12345`
-(also see `.env` — change this immediately for any real deployment).
 
-**2. Frontend**
+python -m venv .venv
+
+source .venv/bin/activate
+```
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run server
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+## Frontend
+
 ```bash
 cd frontend
+
 npm install
-cp .env.example .env
+
 npm run dev
 ```
-App: http://localhost:5173 — log in with the admin above, or register a new account
-(the very first registered user is auto-promoted to admin).
 
-If you didn't run the seed script, go to **Data Upload** in the app and either
-upload your own CSV (`timestamp, route_id, vehicle_count, ...`) or click
-**Seed Demo Data** (admin only) to generate synthetic history instantly.
+---
 
-## Docker
+# 📊 Future Enhancements
 
-```bash
-docker compose up --build
-```
-Backend: http://localhost:8000 · Frontend: http://localhost:5173
+- Real-time traffic sensor integration
+- Google Maps API integration
+- GPS tracking support
+- Live weather integration
+- AI chatbot for traffic assistance
+- Reinforcement Learning for signal optimization
+- Smart traffic light recommendations
+- Multi-city traffic monitoring
+- Mobile application support
+- Kafka-based streaming analytics
 
-Note: the frontend Docker image is a static production build, so
-`VITE_API_BASE_URL` must be correct at *build* time — edit
-`frontend/.env` (or the Dockerfile `ARG`/`ENV`) before `docker compose build`
-if your backend isn't on `localhost:8000`.
+---
 
-## What's implemented
+# 📌 Use Cases
 
-- **Forecasting**: 24h / 7-day hourly forecasts, auto model selection (moving
-  average / linear regression on cyclical time features / seasonal-naive),
-  backtested MAE & MAPE, confidence bands, peak-hour analytics.
-- **Congestion & risk alerts**: auto-derived from each forecast (congestion
-  windows, volume spikes, volatile/high-congestion "accident risk" pattern).
-- **Anomaly detection**: Z-score (seasonal-bucket residuals) + Isolation
-  Forest, merged and visualized.
-- **Mobility optimization engine**: best travel windows, congestion-reduction
-  tips, route load-balancing suggestions (when comparing against sibling routes).
-- **Scenario simulation**: road closures, rain, event surges, load increases —
-  using a BPR-style volume/capacity delay curve for congestion & delay estimates.
-- **Auth & admin**: JWT auth, `user`/`admin` roles, admin panel (manage users,
-  view platform stats, seed demo data).
-- **Data ingestion**: CSV upload with validation for missing timestamps,
-  invalid rows, sparse data, and duplicate points — reports what was skipped
-  and why instead of failing outright.
+- Smart Cities
+- Urban Traffic Planning
+- Government Transportation Departments
+- Highway Monitoring
+- Fleet Management
+- Public Transportation
+- Emergency Response Planning
+- Logistics & Delivery Optimization
 
-See `backend/README.md` for the full API reference and architecture notes.
+---
+
+# 📜 License
+
+This project is developed for educational, research, and demonstration purposes. You are free to modify and extend it for academic or commercial use in accordance with the applicable license terms.
+
+---
+
+# 👨‍💻 Author
+
+Gobinath Devadoss
+
+Developed as a full-stack machine learning platform demonstrating traffic forecasting, congestion prediction, anomaly detection, mobility optimization, and interactive analytics for intelligent transportation systems.
